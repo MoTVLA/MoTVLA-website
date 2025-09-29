@@ -83,3 +83,38 @@ video {
   font-weight:700;
   margin:12px 0 8px;
 }
+
+/* ===============================
+   Image styling
+   =============================== */
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ===============================
+   Caption styling
+   =============================== */
+.caption {
+  text-align: center;
+  font-size: 1em;
+  color: #555;
+  max-width: 800px;
+  margin: 10px auto 0;
+  line-height: 1.4;
+}
+
+.framework-caption {
+  text-align: left;       /* left align similar to abstract */
+  font-size: 1em;
+  color: #333;
+  margin-top: 10px;
+  line-height: 1.6;
+}
