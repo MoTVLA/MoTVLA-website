@@ -1,52 +1,118 @@
+/* ===============================
+   General Title & Subtitle
+   =============================== */
+.section h2, 
+.section h3 {
+  text-align: center;      /* Center horizontally */
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.section h2 {
+  font-size: 2em;          /* Main title size */
+  margin-top: 20px;
+}
+
+.section h3 {
+  font-size: 1.4em;        /* Subtitle size */
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ===============================
+   Video Styling
+   =============================== */
 video {
-    width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .row-caption {
-    text-align: center;
-    font-weight: bold;
-    margin-top: 8px;
-  }
-  
-  .long-video {
-    width: 30%;      /* adjust as you like */
-    height: auto;
-    display: block;
-    margin: 0 auto;  /* keep it centered */
-  }
-  
-  /* Fix for the four-video row layout */
-  .four-video-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: nowrap !important;
-    width: 100%;
-  }
-  
-  .four-video-row .video-col {
-    flex: 0 0 calc(25% - 12px);
-    min-width: 0;
-    max-width: calc(25% - 12px);
-  }
-  
-  .top-caption {
-    text-align: center;
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-  
-  .caption-row {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  .row-caption-half {
-    width: 50%;
-    text-align: center;
-    font-weight: bold;
-  }
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto; /* Keep the video centered */
+}
+
+/* ===============================
+   Video Column Layout
+   =============================== */
+.video-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center annotation and video */
+  text-align: center;
+  flex: 1;
+  max-width: 400px;
+}
+
+/* ===============================
+   Annotations Below Video
+   =============================== */
+.annotation {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  font-size: 1.2em; /* Larger, clearer font */
+  font-weight: 500;
+  color: #333;
+  max-width: 90%; /* Prevent annotation from stretching too wide */
+  text-align: center;
+}
+
+.annotation span {
+  white-space: nowrap; /* Keep all steps in a single line */
+}
+
+/* ===============================
+   Long Video Style
+   =============================== */
+.long-video {
+  width: 30%; /* Adjust width as needed */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center it horizontally */
+}
+
+/* ===============================
+   Four-Video Row Layout
+   =============================== */
+.four-video-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: nowrap !important;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.four-video-row .video-col {
+  flex: 0 0 calc(25% - 12px);
+  min-width: 0;
+  max-width: calc(25% - 12px);
+}
+
+/* ===============================
+   Captions
+   =============================== */
+.top-caption {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.caption-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.row-caption,
+.row-caption-half {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.row-caption-half {
+  width: 50%;
+}
