@@ -77,3 +77,9 @@ video {
 .annotation span {
   white-space: nowrap; /* keep on one line; remove if you want wrapping */
 }
+
+.row-caption{
+  text-align:center;
+  font-weight:700;
+  margin:12px 0 8px;
+}
