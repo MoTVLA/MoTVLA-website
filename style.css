@@ -1,0 +1,52 @@
+video {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .row-caption {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 8px;
+  }
+  
+  .long-video {
+    width: 30%;      /* adjust as you like */
+    height: auto;
+    display: block;
+    margin: 0 auto;  /* keep it centered */
+  }
+  
+  /* Fix for the four-video row layout */
+  .four-video-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: nowrap !important;
+    width: 100%;
+  }
+  
+  .four-video-row .video-col {
+    flex: 0 0 calc(25% - 12px);
+    min-width: 0;
+    max-width: calc(25% - 12px);
+  }
+  
+  .top-caption {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  .caption-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .row-caption-half {
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+  }
