@@ -1,27 +1,55 @@
 /* ===============================
-   General Title & Subtitle
+   Base layout
    =============================== */
-.section h2, 
-.section h3 {
-  text-align: center;      /* Center horizontally */
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.section h2 {
-  font-size: 2em;          /* Main title size */
-  margin-top: 20px;
-}
-
-.section h3 {
-  font-size: 1.4em;        /* Subtitle size */
-  font-weight: 500;
-  margin-top: 8px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* ===============================
-   Video Styling
+   Titles
+   =============================== */
+h1, h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+h1 { font-size: 2.4em; }
+h2 { font-size: 1.8em; font-weight: 600; }
+
+/* ===============================
+   Sections
+   =============================== */
+.section {
+  margin-bottom: 60px;
+}
+
+/* ===============================
+   Video rows / columns
+   =============================== */
+.video-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;        /* space between videos */
+  flex-wrap: wrap;  /* wrap on smaller screens */
+}
+
+.video-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center video + annotation */
+  text-align: center;
+  max-width: 400px;
+  flex: 1;
+}
+
+/* ===============================
+   Video element
    =============================== */
 video {
   width: 100%;
@@ -29,90 +57,23 @@ video {
   border: 1px solid #ccc;
   border-radius: 4px;
   display: block;
-  margin: 0 auto; /* Keep the video centered */
+  margin: 0 auto;
 }
 
 /* ===============================
-   Video Column Layout
-   =============================== */
-.video-col {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center annotation and video */
-  text-align: center;
-  flex: 1;
-  max-width: 400px;
-}
-
-/* ===============================
-   Annotations Below Video
+   Annotation below each video
    =============================== */
 .annotation {
   margin-top: 10px;
   padding: 8px 12px;
   background-color: #f9f9f9;
   border-radius: 6px;
-  font-size: 1.2em; /* Larger, clearer font */
+  font-size: 1.2em;   /* larger, clearer */
   font-weight: 500;
   color: #333;
-  max-width: 90%; /* Prevent annotation from stretching too wide */
-  text-align: center;
+  max-width: 90%;
 }
 
 .annotation span {
-  white-space: nowrap; /* Keep all steps in a single line */
-}
-
-/* ===============================
-   Long Video Style
-   =============================== */
-.long-video {
-  width: 30%; /* Adjust width as needed */
-  height: auto;
-  display: block;
-  margin: 0 auto; /* Center it horizontally */
-}
-
-/* ===============================
-   Four-Video Row Layout
-   =============================== */
-.four-video-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  flex-wrap: nowrap !important;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.four-video-row .video-col {
-  flex: 0 0 calc(25% - 12px);
-  min-width: 0;
-  max-width: calc(25% - 12px);
-}
-
-/* ===============================
-   Captions
-   =============================== */
-.top-caption {
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.caption-row {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.row-caption,
-.row-caption-half {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 8px;
-}
-
-.row-caption-half {
-  width: 50%;
+  white-space: nowrap; /* keep on one line; remove if you want wrapping */
 }

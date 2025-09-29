@@ -5,130 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MoTVLA: A Vision-Language-Action Model with Unified Fast-Slow Reasoning</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-      max-width: 1000px;
-      margin: 50px auto;
-      padding: 0 20px;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    h1, h2 {
-      color: #222;
-    }
-
-    .section {
-      margin-bottom: 60px;
-    }
-
-    .video-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .video-col {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    video {
-      width: 100%;
-      height: auto;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-
-    .annotation {
-      font-size: 0.9em;
-      margin-top: 10px;
-      padding-left: 20px;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .caption {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-    
-    /* Fix for the four-video row layout */
-    .four-video-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      flex-wrap: nowrap !important;
-    }
-    
-    .four-video-row .video-col {
-      flex: 0 0 calc(25% - 12px);
-      min-width: 0;
-      max-width: calc(25% - 12px);
-    }
-    
-    .top-caption {
-      text-align: center;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-    
-    .caption-row {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-    }
-    
-    .row-caption-half {
-      width: 50%;
-      text-align: center;
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
 
+  <!-- Main Title -->
   <h1>MoTVLA: A Vision-Language-Action Model with Unified Fast-Slow Reasoning</h1>
 
+  <!-- Abstract -->
   <div class="section">
     <h2>Abstract</h2>
     <p>
-      Integrating visual-language instructions into visuomotor policies is gaining momentum in robot learning for enhancing open-world generalization. Despite promising advances, existing approaches face two challenges: limited language steerability when no generated reasoning is used as a condition, or significant inference latency when reasoning is incorporated.In this work, we introduce MoTVLA, a mixture-of-transformers (MoT)-based vision-language-action (VLA) model that integrates fast-slow unified reasoning with behavior policy learning. MoTVLA preserves the general intelligence of pre-trained VLMs (serving as the generalist) for tasks such as perception, scene understanding, and semantic planning, while incorporating a domain expert, a second transformer that shares knowledge with the pretrained VLM, to generate fast domain-specific reasoning (e.g., robot motion decomposition), thereby improving policy execution efficiency. By conditioning the action expert on decomposed motion instructions, MoTVLA can learn diverse behaviors and substantially improve language steerability. Extensive evaluations across natural language processing benchmarks, robotic simulation environments, and real-world experiments confirm the superiority of MoTVLA in both language reasoning and manipulation task performance.
+      Integrating visual-language instructions into visuomotor policies is gaining momentum in robot learning for enhancing open-world generalization. Despite promising advances, existing approaches face two challenges: limited language steerability when no generated reasoning is used as a condition, or significant inference latency when reasoning is incorporated. In this work, we introduce MoTVLA, a mixture-of-transformers (MoT)-based vision-language-action (VLA) model that integrates fast-slow unified reasoning with behavior policy learning. MoTVLA preserves the general intelligence of pre-trained VLMs (the generalist) for perception, scene understanding, and semantic planning, while a domain expert—another transformer sharing knowledge with the VLM—generates fast domain-specific reasoning (e.g., motion decomposition) to improve policy efficiency. Conditioning the action expert on decomposed motion instructions improves language steerability and behavior diversity. Evaluations across NLP benchmarks, simulation, and real-world experiments confirm MoTVLA’s advantages in reasoning and manipulation.
     </p>
   </div>
 
+  <!-- Simulation: Cube Stacking -->
   <div class="section">
-    <h2>Simulation: Object relocation with stability (Cube Stacking)</h2>
+    <h2>Simulation: Object Relocation with Stability (Cube Stacking)</h2>
     <div class="video-row">
-      
-      <!-- First video + annotation -->
       <div class="video-col">
         <video controls>
-          <source src="media/simulation_demo/stack_cube/demo1.mp4" type="video/mp4">
+          <source src="media/simulation_demo/stack_cube/demo1.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div class="annotation">
-          <span>Cube Stacking 1</span>
-        </div>
+        <div class="annotation"><span>Cube Stacking 1</span></div>
       </div>
 
-      <!-- Second video + annotation -->
       <div class="video-col">
         <video controls>
-          <source src="media/simulation_demo/stack_cube/demo2.mp4" type="video/mp4">
+          <source src="media/simulation_demo/stack_cube/demo2.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <div class="annotation">
-          <span>Cube Stacking 2</span>
-        </div>
+        <div class="annotation"><span>Cube Stacking 2</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simulation: Peg-in-Hole -->
+  <div class="section">
+    <h2>Simulation: Tight-Tolerance Insertion (Peg-in-Hole)</h2>
+    <div class="video-row">
+      <div class="video-col">
+        <video controls>
+          <source src="media/simulation_demo/peg_insertion/demo1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="annotation"><span>Peg-in-Hole 1</span></div>
       </div>
 
+      <div class="video-col">
+        <video controls>
+          <source src="media/simulation_demo/peg_insertion/demo2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="annotation"><span>Peg-in-Hole 2</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Simulation: Use Tool -->
+  <div class="section">
+    <h2>Simulation: Using Tools for Manipulation</h2>
+    <div class="video-row">
+      <div class="video-col">
+        <video controls>
+          <source src="media/simulation_demo/use_tool/demo1.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="annotation"><span>Use Tool 1</span></div>
+      </div>
+
+      <div class="video-col">
+        <video controls>
+          <source src="media/simulation_demo/use_tool/demo2.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div class="annotation"><span>Use Tool 2</span></div>
+      </div>
     </div>
   </div>
 
