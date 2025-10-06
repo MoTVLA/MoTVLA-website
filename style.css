@@ -118,3 +118,38 @@ video {
   margin-top: 10px;
   line-height: 1.6;
 }
+
+/* ===== Group headers + badges for model result labels ===== */
+.group-header {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 10px;
+}
+
+.label-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+
+.label-badge.success {
+  background: #e6f6ec;
+  color: #166534;          /* deep green text */
+  border-color: #86efac;   /* light green border */
+}
+
+.label-badge.failure {
+  background: #fde8e8;
+  color: #991b1b;          /* deep red text */
+  border-color: #fecaca;   /* light red border */
+}
+
+/* (Optional) tighten spacing under a badge before videos */
+.group-header + .video-row {
+  margin-top: 8px;
+}
