@@ -65,6 +65,85 @@
       Performance comparison across different models for simulation and real-world manipulation tasks.
     </p>
   </div>
+
+  <!-- ===============================
+       Real-World: Table Bussing Section
+       =============================== -->
+<!-- Real-World: Table Bussing (Ambiguous Instructions) -->
+<div class="section">
+  <h2>Real-World: Table Bussing (Ambiguous Instructions)</h2>
+
+  <!-- ===== Our model (success) ===== -->
+  <div class="group-header">
+    <span class="label-badge success" aria-label="Our model success">✔ Our model (success)</span>
+  </div>
+  <div class="video-row">
+    <div class="video-col">
+      <video controls>
+        <source src="media/video_with_text/sort_rubbish.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="annotation"><span>Sort the rubbish into the box.</span></div>
+    </div>
+
+    <div class="video-col">
+      <video controls>
+        <source src="media/video_with_text/sort_cucumber.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="annotation"><span>Put the green cucumber into the basket.</span></div>
+    </div>
+  </div>
+
+  <!-- ===== Other Model A (failure) ===== -->
+  <div class="group-header">
+    <span class="label-badge failure" aria-label="Other model failed">✖ Pi-0 (failure)</span>
+  </div>
+  <div class="video-row">
+    <div class="video-col">
+      <video controls>
+        <!-- TODO: replace with your video -->
+        <source src="media/realworld_demo/sort_garbage/pi0_garbage_fruit.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="annotation"><span>Fails to grasp.</span></div>
+    </div>
+
+    <div class="video-col">
+      <video controls>
+        <!-- TODO: replace with your video -->
+        <source src="media/realworld_demo/sort_cucumber/pi0_fruit_garbage.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="annotation"><span>Fails to grasp. </span></div>
+    </div>
+  </div>
+
+  <!-- ===== Other Model B (failure) ===== -->
+  <div class="group-header">
+    <span class="label-badge failure" aria-label="Other model failed">✖ GR-MG (failure)</span>
+  </div>
+  <div class="video-row">
+    <div class="video-col">
+      <video controls>
+        <!-- TODO: replace with your video -->
+        <source src="media/realworld_demo/sort_garbage/grmg_garbage_fruit.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="annotation"><span>Fails to grasp.</span></div>
+    </div>
+
+    <div class="video-col">
+      <video controls>
+        <!-- TODO: replace with your video -->
+        <source src="media/realworld_demo/sort_cucumber/grmg_fruit_garbage.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="annotation"><span>Unable to follow ambiguous instruction.</span></div>
+    </div>
+  </div>
+</div>
+
     <!-- ===============================
      Real-World: Six-Video Section
      =============================== -->
@@ -144,82 +223,9 @@
 
 </div>
 
-<!-- Simulation: Use Tool -->
-  <!-- Real-World: Table Bussing (Ambiguous Instructions) -->
-<div class="section">
-  <h2>Real-World: Table Bussing (Ambiguous Instructions)</h2>
-
-  <!-- ===== Our model (success) ===== -->
-  <div class="group-header">
-    <span class="label-badge success" aria-label="Our model success">✔ Our model (success)</span>
-  </div>
-  <div class="video-row">
-    <div class="video-col">
-      <video controls>
-        <source src="media/realworld_demo/sort_garbage/sort_garbage.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="annotation"><span>Sort the rubbish into the box.</span></div>
-    </div>
-
-    <div class="video-col">
-      <video controls>
-        <source src="media/realworld_demo/sort_cucumber/sort_cucumber.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="annotation"><span>Put the green cucumber into the basket.</span></div>
-    </div>
-  </div>
-
-  <!-- ===== Other Model A (failure) ===== -->
-  <div class="group-header">
-    <span class="label-badge failure" aria-label="Other model failed">✖ Pi-0 (failure)</span>
-  </div>
-  <div class="video-row">
-    <div class="video-col">
-      <video controls>
-        <!-- TODO: replace with your video -->
-        <source src="media/realworld_demo/sort_garbage/pi0_garbage_fruit.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="annotation"><span>Fails to grasp.</span></div>
-    </div>
-
-    <div class="video-col">
-      <video controls>
-        <!-- TODO: replace with your video -->
-        <source src="media/realworld_demo/sort_cucumber/pi0_fruit_garbage.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="annotation"><span>Fails to grasp. </span></div>
-    </div>
-  </div>
-
-  <!-- ===== Other Model B (failure) ===== -->
-  <div class="group-header">
-    <span class="label-badge failure" aria-label="Other model failed">✖ GR-MG (failure)</span>
-  </div>
-  <div class="video-row">
-    <div class="video-col">
-      <video controls>
-        <!-- TODO: replace with your video -->
-        <source src="media/realworld_demo/sort_garbage/grmg_garbage_fruit.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="annotation"><span>Fails to grasp.</span></div>
-    </div>
-
-    <div class="video-col">
-      <video controls>
-        <!-- TODO: replace with your video -->
-        <source src="media/realworld_demo/sort_cucumber/grmg_fruit_garbage.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="annotation"><span>Unable to follow ambiguous instruction.</span></div>
-    </div>
-  </div>
-</div>
-
+  <!-- ===============================
+       Simulation Video Sections
+       =============================== -->
   <!-- Simulation: Cube Stacking -->
   <div class="section">
     <h2>Simulation: Object Relocation with Stability (Cube Stacking)</h2>
