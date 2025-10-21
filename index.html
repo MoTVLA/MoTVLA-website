@@ -14,7 +14,7 @@
   <!-- Abstract -->
   <div class="section">
     <h2>Abstract</h2>
-    <p>
+    <p class="abstract-text">
       Integrating visual-language instructions into visuomotor policies is gaining momentum in robot learning for enhancing open-world generalization. Despite promising advances, existing approaches face two challenges: limited language steerability when no generated reasoning is used as a condition, or significant inference latency when reasoning is incorporated. In this work, we introduce MoTVLA, a mixture-of-transformers (MoT)-based vision-language-action (VLA) model that integrates fast-slow unified reasoning with behavior policy learning. MoTVLA preserves the general intelligence of pre-trained VLMs (the generalist) for perception, scene understanding, and semantic planning, while a domain expert—another transformer sharing knowledge with the VLM—generates fast domain-specific reasoning (e.g., motion decomposition) to improve policy efficiency. Conditioning the action expert on decomposed motion instructions improves language steerability and behavior diversity. Evaluations across NLP benchmarks, simulation, and real-world experiments confirm MoTVLA’s advantages in reasoning and manipulation.
     </p>
     <!-- Teaser Image -->
@@ -59,7 +59,7 @@
   <div class="section">
     <h2>Robot Manipulation Tasks Results</h2>
     <div class="image-container">
-      <img src="media/figures/robot_quantitative.png" alt="MoTVLA robot_quantitative">
+      <img src="media/figures/robot_tasks_histogram.png" alt="MoTVLA robot_tasks_histogram">
     </div>
      <p class="framework-caption">
       Performance comparison across different models for simulation and real-world manipulation tasks.
